@@ -1,30 +1,37 @@
-﻿// File: for.cs
+﻿// File: foreach.cs
 using System;
 
-class TestFor
+class TestForeach
 {
     static void Main()
     {
-        int sum = 0;
-        int x = 1;  // need to declare x here if we need to access it outside the loop
+        int[] mynumbers = new int[] { 5, -2, 100, 12, 4, -5 };
+        int Min = mynumbers[0];  // pick one from the list for comparison to find min
+        int Max = mynumbers[0];  // pick one from the list for comparison  to find max
 
-        for (; ;) // use semicolons between statements
+        // find the min and max
+        // minimum value is -5
+        // maximum value is 100
+
+        foreach (int x in mynumbers) // looping into an array
         {
-            sum = sum + x;
-
-            if (sum > 20)
+            if (x < Min)
             {
-                // exits the for loop
-                break;
+                // code here
+                Min = x;
+
             }
 
-            if (sum == 10)
+            if (x > Max)
             {
-                // skips remainder of loop body
-                continue;
+                // code here
+                Max = x;
             }
-
-            Console.WriteLine("x is {0} and sum is {1}", x, sum);
         }
+
+        Console.WriteLine("The Minimum value is {0}", Min);
+        Console.WriteLine("The Maximum value is {0}", Max);
+
+        Console.ReadLine();
     }
 }
