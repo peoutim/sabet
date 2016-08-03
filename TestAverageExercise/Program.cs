@@ -23,10 +23,10 @@ class TestAverage
     // 3. Nothing to do here.
     static void Main()
     {
-        int iAvg = Average(5, 4, 2, 8);
+        iAvg = Average(5, 4, 2, 8);
         Console.WriteLine("The average is {0}", iAvg);
 
-        double dAvg = Average(5.0, 4.0, 2.0, 8.0);
+        dAvg = Average(5.0, 4.0, 2.0, 8.0);
         Console.WriteLine("The average is {0}", dAvg);
 
         Console.ReadLine();
