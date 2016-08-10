@@ -1,0 +1,13 @@
+Console.WriteLine("Item#  ItemID  Description           Price  QOH  Cost  Value");
+         Console.WriteLine("-----  ------  --------------------  -----  ---  ----  -----");
+                    for(int x=0; x<icount; x++)
+                    {
+                        Console.Write("{0,5}  ",x);
+                        Console.Write("{0,6}  ",itemprop[x].itemIDNo);
+                        Console.Write("{0,-20}  ",itemprop[x].sDescription);
+                        Console.Write("{0,5}  ",itemprop[x].dblPricePerItem);
+                        Console.Write("{0,3}  ",itemprop[x].iQuantityOnHand);
+                        Console.Write("{0,4}  ",itemprop[x].dblOurCostPerItem);
+                        Console.Write("{0,5}",itemprop[x].dblValueOfItem);
+                        Console.WriteLine();
+                    }
