@@ -1,0 +1,66 @@
+﻿using System;
+
+namespace WithInterfaces
+{
+    public interface ISpeak
+    {
+        void Speak();
+    }
+
+    public class Dog : ISpeak
+    {
+        // Leave Woof alone
+        public void Woof()
+        {
+            Console.WriteLine("Woof");
+        }
+
+        public void Speak()
+        {
+            Woof();
+        }
+    }
+
+    public class Cat : ISpeak
+    {
+        // Leave Meow alone
+        public void Meow()
+        {
+            Console.WriteLine("Meow");
+        }
+
+        public void Speak()
+        {
+            Meow();
+        }
+    }
+
+    public class Horse : ISpeak
+    {
+        // Remove Neigh( ) and just use Speak( )
+        public void Speak()
+        {
+            Console.WriteLine("Neigh");
+        }
+
+    }
+
+    class Program
+    {
+        static void SaySomething(ISpeak speak)
+        {
+            speak.Speak();
+        }
+
+        static void Main()
+        {
+            var dog = new Dog();
+            var cat = new Cat();
+            var horse = new Horse();
+
+            SaySomething(dog);
+            SaySomething(cat);
+            SaySomething(horse);
+        }
+    }
+}

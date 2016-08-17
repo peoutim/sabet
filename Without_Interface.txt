@@ -1,0 +1,60 @@
+using System;
+ 
+namespace OneWay
+{
+    public class Dog
+    {
+        public void Woof()
+        {
+            Console.WriteLine("Woof");
+        }
+    }
+ 
+    public class Cat
+    {
+        public void Meow()
+        {
+            Console.WriteLine("Meow");
+        }
+ 
+    }
+ 
+    public class Horse
+    {
+        public void Neigh()
+        {
+            Console.WriteLine("Neigh");
+        }
+ 
+    }
+ 
+    class Program
+    {
+        static void SaySomething(Dog dog)
+        {
+            dog.Woof();
+        }
+ 
+        static void SaySomething(Cat cat)
+        {
+            cat.Meow();
+        }
+ 
+        static void SaySomething(Horse horse)
+        {
+            horse.Neigh();
+        }
+ 
+ 
+        static void Main()
+        {
+            var dog = new Dog();
+            var cat = new Cat();
+            var horse = new Horse();
+ 
+            SaySomething(dog);
+            SaySomething(cat);
+            SaySomething(horse);
+        }
+    }
+}
